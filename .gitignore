@@ -40,3 +40,4 @@ target/
 .todo
 /settings.gradle
 src/test/resources/local.properties
+src/test/resources/cache/

@@ -14,13 +14,15 @@ dependencies {
     def retrofit_version = "2.9.0"
     def http_logging_version = "4.9.3"
     def owner_version = "1.0.12"
+    def vavr_version = "0.10.4"
 
     testImplementation (
             "org.junit.jupiter:junit-jupiter-api:$junit_version",
             "com.squareup.retrofit2:retrofit:$retrofit_version",
             "com.squareup.retrofit2:converter-gson:$retrofit_version",
             "com.squareup.okhttp3:logging-interceptor:$http_logging_version",
-            "org.aeonbits.owner:owner:$owner_version"
+            "org.aeonbits.owner:owner:$owner_version",
+            "io.vavr:vavr:$vavr_version"
     )
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junit_version"
 }
