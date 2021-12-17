@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def junit_version = "5.8.2"
+    def retrofit_version = "2.9.0"
+    def http_logging_version = "4.9.3"
+    def owner_version = "1.0.12"
+
+    testImplementation (
+            "org.junit.jupiter:junit-jupiter-api:$junit_version",
+            "com.squareup.retrofit2:retrofit:$retrofit_version",
+            "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            "com.squareup.okhttp3:logging-interceptor:$http_logging_version",
+            "org.aeonbits.owner:owner:$owner_version"
+    )
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junit_version"
+}
+
+test {
+    useJUnitPlatform()
+}
