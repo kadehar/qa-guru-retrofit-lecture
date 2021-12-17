@@ -38,5 +38,5 @@ target/
 /gradlew
 /gradlew.bat
 .todo
-/settings.gradle# Created by .ignore support plugin (hsz.mobi)
-/local.properties
+/settings.gradle
+src/test/resources/local.properties
