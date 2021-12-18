@@ -9,4 +9,7 @@ import retrofit2.http.Query;
 public interface NewsApi {
     @GET(Constants.TOP_HEADLINES_ENDPOINT)
     Call<News> fetchNews(@Query("country") String country);
+
+    @GET(Constants.EVERYTHING_ENDPOINT)
+    Call<News> fetchNewsByTitle(@Query("q") String title);
 }

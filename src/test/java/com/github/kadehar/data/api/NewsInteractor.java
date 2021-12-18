@@ -7,6 +7,17 @@ import io.vavr.control.Either;
 import java.io.IOException;
 
 public class NewsInteractor {
+    public static Either<String, News> fetchNewsByTitle(String title) {
+        NewsApi api = RetrofitClient.createService(NewsApi.class);
+        try {
+            return Either.right(
+                    api.fetchNewsByTitle(title).execute().body()
+            );
+        } catch (IOException ioEx) {
+            return Either.left(ioEx.getMessage());
+        }
+    }
+
     public static Either<String, News> fetchNewsWithEither(String country) {
         NewsApi api = RetrofitClient.createService(NewsApi.class);
         try {
